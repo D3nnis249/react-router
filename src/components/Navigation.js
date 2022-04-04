@@ -1,10 +1,17 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import "./App.css";
 
-export default function Navigation({ onNavigate }) {
+export default function Navigation() {
   return (
     <NavStyled>
-      <button onClick={() => onNavigate("home")}>Home</button>
-      <button onClick={() => onNavigate("about")}>About</button>
+      <Link className="Button" to="/">
+        Home
+      </Link>{" "}
+      |{" "}
+      <Link className="Button" to="/about">
+        About
+      </Link>
     </NavStyled>
   );
 }
